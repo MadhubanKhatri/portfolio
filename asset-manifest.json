@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.e2b71c91.css",
+    "main.js": "/portfolio/static/js/main.dc977693.js",
+    "static/js/453.ed3810f9.chunk.js": "/portfolio/static/js/453.ed3810f9.chunk.js",
+    "static/media/file-sharing.png": "/portfolio/static/media/file-sharing.77c0ab2662d9e67b51cb.png",
+    "static/media/video-stream.png": "/portfolio/static/media/video-stream.8323d967bf37978b992a.png",
+    "static/media/movie-booking.jpg": "/portfolio/static/media/movie-booking.8af2cd067d7ab322aa10.jpg",
+    "static/media/weather.png": "/portfolio/static/media/weather.c912e029c8d07b9aa3de.png",
+    "static/media/backpacker.png": "/portfolio/static/media/backpacker.c71df6e6aa419e358c10.png",
+    "static/media/sms.png": "/portfolio/static/media/sms.4e94937acac3e1613c0a.png",
+    "static/media/logo.svg": "/portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/portfolio/index.html",
+    "main.e2b71c91.css.map": "/portfolio/static/css/main.e2b71c91.css.map",
+    "main.dc977693.js.map": "/portfolio/static/js/main.dc977693.js.map",
+    "453.ed3810f9.chunk.js.map": "/portfolio/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2b71c91.css",
+    "static/js/main.dc977693.js"
+  ]
+}
