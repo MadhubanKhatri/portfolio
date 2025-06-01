@@ -1,0 +1,83 @@
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 10%;
+  gap: 40px;
+}
+
+.about-left, .about-right {
+  flex: 1 1 45%;
+}
+
+.about-left h2,
+.about-right h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--text-color, #0f172a);
+}
+
+.about-left p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color, #475569);
+  margin-bottom: 16px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-badge {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 0.2s;
+}
+
+.skill-badge:hover {
+  transform: scale(1.1);
+  background-color: #bae6fd;
+}
+
+/* Education Section */
+.education-section {
+  grid-column: 2;
+  margin-top: 2rem;
+}
+
+.education-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.education-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: black;
+}
+
+.education-card p {
+  margin: 0.25rem 0;
+  color: #080101;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .about-left, .about-right {
+    flex: 1 1 100%;
+  }
+}

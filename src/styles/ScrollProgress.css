@@ -1,0 +1,10 @@
+/* Add this in src/css/ScrollProgress.css (or your global CSS) */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #38bdf8;
+  z-index: 9999;
+}
