@@ -12,6 +12,12 @@ const navItems = [
 ];
 
 function Navbar() {
+  const handleDownload = () => {
+    // Replace 'resume.pdf' with your actual resume file name
+    const resumeUrl = `${process.env.PUBLIC_URL}/resume.pdf`;
+    window.open(resumeUrl, '_blank');
+  };
+
   return (
     <motion.nav
       className="navbar"
@@ -35,7 +41,18 @@ function Navbar() {
               <Link to={item.to}>{item.name}</Link>
             </motion.li>
           ))}
-        </ul>
+          </ul>
+          <motion.div
+          className="resume-container"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 300 }}
+        >
+          <button onClick={handleDownload} className="resume-btn">
+            Download Resume
+          </button>
+        </motion.div>
+        
       </div>
     </motion.nav>
   );
