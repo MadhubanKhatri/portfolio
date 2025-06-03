@@ -41,3 +41,19 @@
 .nav-links a:hover {
   color: #38bdf8;
 }
+
+.resume-btn {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: #1976d2;
+}
