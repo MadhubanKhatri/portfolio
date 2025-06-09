@@ -1,8 +1,9 @@
 // src/components/Navbar.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/Navbar.css';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const navItems = [
   { name: 'Home', to: '/' },
@@ -12,10 +13,16 @@ const navItems = [
 ];
 
 function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const handleDownload = () => {
     // Replace 'resume.pdf' with your actual resume file name
     const resumeUrl = `${process.env.PUBLIC_URL}/resume.pdf`;
     window.open(resumeUrl, '_blank');
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -30,7 +37,11 @@ function Navbar() {
           Madhuban Khatri
         </motion.div>
 
-        <ul className="nav-links">
+        <div className="menu-icon" onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </div>
+
+        <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
           {navItems.map((item) => (
             <motion.li
               key={item.name}
@@ -38,12 +49,12 @@ function Navbar() {
               whileTap={{ scale: 0.95 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <Link to={item.to}>{item.name}</Link>
+              <Link to={item.to} onClick={() => setIsMobileMenuOpen(false)}>{item.name}</Link>
             </motion.li>
           ))}
-          </ul>
+          
           <motion.div
-          className="resume-container"
+          className="resume-container mobile"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: 'spring', stiffness: 300 }}
@@ -52,7 +63,19 @@ function Navbar() {
             Download Resume
           </button>
         </motion.div>
-        
+        </ul>
+
+        {/* Resume button outside nav links for desktop */}
+        <motion.div
+          className="resume-container desktop"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 300 }}
+        >
+          <button onClick={handleDownload} className="resume-btn">
+            Download Resume
+          </button>
+        </motion.div>
       </div>
     </motion.nav>
   );

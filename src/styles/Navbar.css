@@ -57,3 +57,81 @@
 .resume-btn:hover {
   background: #1976d2;
 }
+
+
+/* Add this to your existing Navbar.css file */
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: #f1f5f9;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background-color: #0f172a;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 16px 0;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .resume-container {
+    margin-top: 10px;
+  }
+}
+
+
+.resume-container.desktop {
+  display: block;
+}
+
+.resume-container.mobile {
+  display: none;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background-color: #0f172a;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 0;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .resume-container.desktop {
+    display: none;
+  }
+
+  .resume-container.mobile {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
