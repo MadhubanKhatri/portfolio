@@ -1,14 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Navbar from './components/Navbar';
 import ScrollProgress from './components/ScrollProgress';
+import React, { useEffect, useState } from 'react'
 
-function App() {
+
+function App() {  
   return (
     <div className="App">
       <Router>

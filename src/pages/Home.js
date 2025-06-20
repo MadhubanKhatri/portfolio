@@ -70,7 +70,7 @@ function Home() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h3>Full Stack Developer</h3>
+          <h3>Software Developer</h3>
           <p><strong>Company:</strong> ReliableSoft PVT. LTD.</p>
           <p><strong>Duration:</strong> 2 year</p>
           <p>
